@@ -1,6 +1,6 @@
 import os
 # import tensorflow as tf
-import xgboost
+# import xgboost
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -45,7 +45,6 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.svm import SVR
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
-import xgboost
 
 from itertools import combinations
 from tqdm import tqdm
@@ -272,7 +271,7 @@ def main():
             train_data.drop(['set_date'], axis=1, inplace=True)
 
             # 환경 변수
-            model_list = ["GBM", "RF", "XGB"]  # 분석 모델 리스트 설정 : LSTM, GBM, RF, SVR
+            model_list = ["GBM", "RF"]  # 분석 모델 리스트 설정 : LSTM, GBM, RF, SVR
             performance_list = ["RMSE", "R2", "MSE", "MAE"]  # 분석 성능평가 리스트 설정 : RMSE, R2, MSE, MAE
             var_list = [columns_list]  # 최저기온=TMn_HS_old
             temp_list_name = ["Mn"]
