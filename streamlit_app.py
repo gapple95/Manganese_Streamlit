@@ -36,6 +36,7 @@ import missingno as msno
 
 from itertools import combinations
 from tqdm import tqdm
+import xgboost
 
 
 
@@ -259,7 +260,7 @@ def main():
             train_data.drop(['set_date'], axis=1, inplace=True)
 
             # 환경 변수
-            model_list = ["GBM", "RF"]  # 분석 모델 리스트 설정 : LSTM, GBM, RF, SVR
+            model_list = ["GBM", "RF", "XGB"]  # 분석 모델 리스트 설정 : LSTM, GBM, RF, SVR
             performance_list = ["RMSE", "R2", "MSE", "MAE"]  # 분석 성능평가 리스트 설정 : RMSE, R2, MSE, MAE
             var_list = [columns_list]  # 최저기온=TMn_HS_old
             temp_list_name = ["Mn"]
