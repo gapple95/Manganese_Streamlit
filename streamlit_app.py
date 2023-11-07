@@ -1,18 +1,11 @@
 import os
-# import tensorflow as tf
-# import xgboost
+import xgboost
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import font_manager, rc
-# Binder 글꼴
-# plt.rc('font', family='NanumGothic')
-# 윈도우 글꼴
-plt.rc('font', family='Malgun Gothic')
 
-# import warnings
-# warnings.filterwarnings("ignore")
-# tf.set_random_seed(777)
+plt.rc('font', family='Malgun Gothic')
 
 from tensorflow import keras
 from sklearn.model_selection import GridSearchCV
@@ -21,7 +14,8 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import r2_score
-from datetime import datetime
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.svm import SVR
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
@@ -39,12 +33,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib import rc
 import missingno as msno
-
-from sklearn.preprocessing import MinMaxScaler
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from sklearn.svm import SVR
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-from sklearn.model_selection import train_test_split
 
 from itertools import combinations
 from tqdm import tqdm
